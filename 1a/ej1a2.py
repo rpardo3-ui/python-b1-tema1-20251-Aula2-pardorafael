@@ -43,8 +43,17 @@ Exemple:
 
 def sum_odd_numbers(list_numbers):
     # Write here your code
-    pass
+   add = 0 #inicializamos add
+    for i in list_numbers: #recorremos list_numbers numero a numero
+        if not isinstance(i, int): # si i no es un entero
+            raise ValueError("Numbers in the list must be integer.") #lanzamos ValueError
+        elif i < 0: #si i es negativo 
+            raise ValueError("Numbers in the list must be greater\
+                             or equal than 0.") #lanzamos ValueError
+        elif i %2 != 0: # si el resto de la division i%2 es diferente de 0
+            add += i #incrementamos add en una unidad
+    return add
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
+print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
