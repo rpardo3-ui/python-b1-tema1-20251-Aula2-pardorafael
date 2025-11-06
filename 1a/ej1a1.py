@@ -40,7 +40,22 @@ Exemple:
 '''
 
 def fibonacci(fibonacci_number):
-   pass
+     # Write here your code
+   try:
+       fibonacci_number =int(fibonacci_number) #convertimos a entero
+        
+        if not isinstance(fibonacci_number, int): #si "fibonacci_number" no es un entero
+            raise ValueError("Number must be integer.") #Lanzar mensaje de error
+        elif fibonacci_number < 0: # si "fibonacci_number" es menor que 0
+            raise ValueError("Number must be greater than 0.") #Lanzar mensaje de error
+        else:
+            a, b = 0, 1
+        for puntero in range(fibonacci_number):
+            a, b = b, a + b
+        return a
+    except ValueError as e:
+        print(f"Error: {e}")
+print(fibonacci(input("Introduce un numero entero y positivo: >>> ")))
     
 
 
