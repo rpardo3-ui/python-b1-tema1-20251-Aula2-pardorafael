@@ -62,11 +62,15 @@ Exemple:
 '''
 
 
-import numpy as np
-
+import numpy as np #importamos la libreria numpy
+# Esta funcion calculara la media y la desviacion standar  de los numeros contenidos en list_numbers
 def results(list_numbers):
     # Write here your code
-    pass
+   average = np.mean(list_numbers) #Calculamos la media
+   standard = np.std(list_numbers) #Calculamos la desviacion standar
+   print("Average: ", {round(average, 2)}) #imprimimos la media redondeada a 2 decimales
+   print("Standard deviation: ", {round(standard, 2)}) #imprimimos la dsviacion standar redondeada a 2 decimales
+   return average, standard
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
