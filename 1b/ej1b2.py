@@ -63,12 +63,15 @@ Exemple:
      -1
 """
 
-import math
-
+import math #importamos la libreria que necesitamos para los calculos matematicos
+#funcion que calcula el seno de un angulo (angle) expresado en grados
 def calculate_angle(angle):
-    # Write here your code
-    pass
+    sin = math.sin(math.radians(angle)) #la funcion sin calcula el seno de un angulo expresado en radianes
+    return round(sin, 2)#Usamos la funcion round para indicar dos decimales
+
+angle=int(input("Introduce el angulo en grados >>> ")) #Solicitamos la entrada en de un angulo en grados
+print(f"El seno de {angle} es igual a {calculate_angle(angle)}") #definimos la frase de salida y llamamos a (calculate_angle())
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(calculate_angle(270))
+#print(calculate_angle(270))
